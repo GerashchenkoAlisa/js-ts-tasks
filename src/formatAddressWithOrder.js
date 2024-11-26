@@ -9,5 +9,13 @@
  * @returns {function}
  */
 module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  // eslint-disable-next-line func-names
+  return function (addressNonformatted) {
+    let addressFormatted = '';
+    order.forEach(a => {
+      addressFormatted += `${addressNonformatted[a]}, `;
+    });
+    addressFormatted = addressFormatted.slice(addressNonformatted.length, -2);
+    return addressFormatted;
+  };
 };

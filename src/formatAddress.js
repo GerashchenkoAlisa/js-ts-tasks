@@ -4,5 +4,9 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  throw new Error('Not implemented'); // remove me and write a solution
+  // eslint-disable-next-line func-names
+  return function (addressNonformatted) {
+    const addressArray = Object.values(addressNonformatted);
+    return addressArray.join(', ');
+  };
 };

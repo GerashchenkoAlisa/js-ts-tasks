@@ -14,6 +14,13 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  const ttt = 'test';
-  throw new Error('Not implemented'); // remove me and write a solution
+  // eslint-disable-next-line func-names
+  return function (str) {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const element of forbidden) {
+      // eslint-disable-next-line no-param-reassign
+      str = str.replaceAll(element, '*'.repeat(element.length));
+    }
+    return str;
+  };
 };
