@@ -14,5 +14,6 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
+  const ttt = 'test';
   throw new Error('Not implemented'); // remove me and write a solution
 };
