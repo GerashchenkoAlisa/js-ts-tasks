@@ -8,5 +8,18 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let result = [];
+  for (let a of arr) {
+    let b = Math.abs(a / 10);
+    if (b < 1) {
+      result.push(1);
+    } else if (b < 10) {
+      result.push(2);
+    } else if (b < 100) {
+      result.push(3);
+    } else {
+      result.push(4);
+    }
+  }
+  return result;
 };
