@@ -23,5 +23,12 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function (income, debts) {
+    TestUtils.income = income;
+    const summ_1 = TestUtils.sumAllObjectProperties.call(income);
+    TestUtils.debts = debts;
+    const summ_2 = TestUtils.sumAllObjectProperties.call(debts);
+
+    return summ_1 - summ_2;
+  };
 };
