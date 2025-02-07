@@ -6,7 +6,7 @@
  * @returns {boolean}
  */
 module.exports.converter = function (value: number, from: string, to: string): number {
-  if (from === to) {
+  if (from === to) { 
     return parseFloat(value.toFixed(2));
   }
   let convertedValue: number;
